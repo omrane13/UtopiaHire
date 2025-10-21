@@ -1,0 +1,392 @@
+/* src/pages/Dashboard.css */
+
+/* Sidebar Styles - VERTICALE ALIGNÉE */
+.sidebar {
+  width: 250px;
+  background: white;
+  border-right: 1px solid #e1e5e9;
+  padding: 1.5rem 1rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+  margin: 0;
+  text-align: center;
+}
+
+.sidebar-nav {
+  margin-top: 2rem;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #718096;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.nav-link:hover,
+.nav-item.active .nav-link {
+  background: #007bff;
+  color: white;
+}
+
+.nav-icon {
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.nav-text {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Le reste du CSS reste inchangé */
+.dashboard-wrapper {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.main-content {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.content-area {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+}
+
+.dashboard-content {
+  padding: 2rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e1e5e9;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-subtitle {
+  color: #718096;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Quick Actions - Horizontal */
+.quick-actions-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.actions-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.action-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e1e5e9;
+  min-width: 280px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.action-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.action-content {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.action-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2d3748;
+}
+
+.action-description {
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.action-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+}
+
+.action-button:hover {
+  background: #0056b3;
+}
+
+/* Progress Section - Horizontal */
+.progress-section {
+  margin-bottom: 2rem;
+}
+
+.progress-grid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.progress-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e1e5e9;
+  min-width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.progress-label {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.progress-badge {
+  font-size: 0.8rem;
+  color: #718096;
+  background: #f7fafc;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.progress-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-top: auto;
+}
+
+/* Recent Activity - Horizontal */
+.activity-section {
+  margin-bottom: 2rem;
+}
+
+.activity-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.activity-item {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e1e5e9;
+  min-width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.activity-icon {
+  background: #10b981;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-text {
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.activity-time {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.activity-badge {
+  background: #ef4444;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid #e1e5e9;
+  }
+  
+  .nav-links {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  
+  .nav-item {
+    flex-shrink: 0;
+    width: auto;
+  }
+  
+  .nav-link {
+    white-space: nowrap;
+  }
+  
+  .dashboard-content {
+    padding: 1rem;
+  }
+  
+  .actions-grid,
+  .progress-grid,
+  .activity-list {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  
+  .action-card,
+  .progress-item,
+  .activity-item {
+    min-width: auto;
+  }
+}
+
+/* Scrollbar personnalisé */
+.actions-grid::-webkit-scrollbar,
+.progress-grid::-webkit-scrollbar,
+.activity-list::-webkit-scrollbar,
+.nav-links::-webkit-scrollbar {
+  height: 6px;
+}
+
+.actions-grid::-webkit-scrollbar-track,
+.progress-grid::-webkit-scrollbar-track,
+.activity-list::-webkit-scrollbar-track,
+.nav-links::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.actions-grid::-webkit-scrollbar-thumb,
+.progress-grid::-webkit-scrollbar-thumb,
+.activity-list::-webkit-scrollbar-thumb,
+.nav-links::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.actions-grid::-webkit-scrollbar-thumb:hover,
+.progress-grid::-webkit-scrollbar-thumb:hover,
+.activity-list::-webkit-scrollbar-thumb:hover,
+.nav-links::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
