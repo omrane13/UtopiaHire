@@ -1,4 +1,4 @@
-/* App.css */
+/* App.css  */
 * {
   margin: 0;
   padding: 0;
@@ -34,8 +34,31 @@ body {
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 2rem;
+}
+.nav-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
 }
 
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  cursor: pointer;
+}
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
 .nav-brand {
   font-size: 1.5rem;
   font-weight: bold;
@@ -45,7 +68,27 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Nouveau style pour les liens de navigation */
+.nav-link {
+  background: transparent;
+  color: #4b5563;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+  background: #f8fafc;
 }
 
 /* Button Styles */
@@ -58,6 +101,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -326,10 +370,68 @@ body {
   font-size: 0.9rem;
 }
 
+/* Header minimal pour les autres pages */
+.header-minimal {
+  background: white;
+  border-bottom: 1px solid #e1e5e9;
+  padding: 0.5rem 2rem;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-minimal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand-mini {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.nav-links-mini {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-mini {
+  background: transparent;
+  color: #718096;
+  border: 1px solid #e1e5e9;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-mini:hover {
+  background: #f8f9fa;
+  color: #2d3748;
+  border-color: #cbd5e0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
   }
 
   .hero {
