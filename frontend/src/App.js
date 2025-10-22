@@ -7,7 +7,7 @@ import ResumeReview from './pages/ResumeReview';
 import InterviewPrep from './pages/InterviewPrep';
 import JobMatches from './pages/JobMatches';
 import CareerInsights from './pages/CareerInsights';
-
+import Login from './Auth/Login';
 function App() {
   return (
     <Router>
@@ -15,7 +15,8 @@ function App() {
         <Routes>
           {/* Route pour la page d'accueil */}
           <Route path="/" element={<HomePage />} />
-          
+          {/* Route pour l'authentification */}
+          <Route path="/auth" element={<Login />} />
           {/* Route pour le dashboard - SANS header */}
           <Route path="/dashboard" element={<Dashboard />} />
           
